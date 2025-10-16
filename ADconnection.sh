@@ -114,14 +114,14 @@ then
       then
       sudo echo "administrator ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
       sudo echo "%DOMAIN\ Domain\ Admins ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_admins
-      sudo echo "%DOMAIN\ SBRglb-Linux-Sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
+      sudo echo "%sbrglb-linux-sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
       #sudo realm permit --groups "$myhost""sudoers"
       else
         if [ "$disssu" = "no" ]
         then
         sudo echo "administrator ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
         sudo echo "%DOMAIN\ Domain\ Admins ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_admins
-        sudo echo "%DOMAIN\ SBRglb-Linux-Sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
+        sudo echo "%sbrglb-linux-sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
         #sudo realm permit --groups "$myhost""sudoers"
         else
         echo "error in readfile config, setting to default"
@@ -151,14 +151,14 @@ else
     [Yy]* )
 sudo echo "administrator ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
 sudo echo "%DOMAIN\ Domain\ Admins ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_admins
-sudo echo "%DOMAIN\ SBRglb-Linux-Sudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
+sudo echo "%sbrglb-linux-sudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
 #sudo realm permit --groups "$myhost""sudoers"
 ;;
 
  [Nn]* )
 sudo echo "administrator ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
 sudo echo "%DOMAIN\ Domain\ Admins ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_admins
-sudo echo "%DOMAIN\ SBRglb-Linux-Sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
+sudo echo "%sbrglb-linux-sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
 #sudo realm permit --groups "$myhost""sudoers"
 ;;
     * ) echo "Please answer yes or no.";;
@@ -476,14 +476,14 @@ then
       then
       sudo echo "administrator ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
       sudo echo "%DOMAIN\ admins ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_admins
-      sudo echo "%DOMAIN\ SBRglb-Linux-Sudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
+      sudo echo "%sbrglb-linux-sudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
       #sudo realm permit --groups "$myhost""sudoers"
       else
         if [ "$disssu" = "no" ]
         then
         sudo echo "administrator ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
         sudo echo "%DOMAIN\ admins ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_admins
-        sudo echo "%DOMAIN\ SBRglb-Linux-Sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
+        sudo echo "%sbrglb-linux-sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_linux_sudoers
         #sudo realm permit --groups "$myhost""sudoers"
         else
         sudo echo "administrator ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
