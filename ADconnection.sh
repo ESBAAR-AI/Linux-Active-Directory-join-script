@@ -749,6 +749,7 @@ elementary=$( hostnamectl | grep -i Operating | awk '{print $3}' ) < /dev/null >
 SUSE=$( hostnamectl | grep -i Operating | awk '{print $3}' ) < /dev/null > /dev/null 2>&1
 clear
 #### OS detection ####
+#### If using Linux Mint, update line 767 to be "LMDE" - applicable for Farhad's machine in IT-392 ####
 if [ "$TheOS" = "Zorin" ] < /dev/null > /dev/null 2>&1
 then
 Zorin_os
